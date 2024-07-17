@@ -1,210 +1,218 @@
 import styled from "styled-components";
 
 const AdminHomeStyles = styled.section`
-	width: 100vw;
-	min-height: 100vh;
-	background: var(--dark);
-	color: var(--light-white);
-	padding: 0 1.5rem;
-	margin-bottom: 7rem;
-]
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--dark);
+  color: var(--light-white);
+  padding: 0 1.5rem;
+  margin-bottom: 7rem;
 
-	.DatePicker {
-		border: 1px solid #ccc;
-		padding: 8px;
-		font-size: 14px;
-		width: 200px;
-	  }
+  .DatePicker {
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 14px;
+    width: 200px;
+  }
 
-	nav {
-		.nav-center {
-			button {
-				padding: 0.7rem 0.5rem;
-				display: flex;
-				align-items: center;
-				gap: 0.5rem;
+  nav {
+    .nav-center {
+      button {
+        padding: 0.7rem 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
 
-				p,
-				span {
-					font-size: 1rem;
-					text-transform: capitalize;
-				}
+        p,
+        span {
+          font-size: 1rem;
+          text-transform: capitalize;
+        }
 
-				span {
-					background: linear-gradient(
-						to right,
-						var(--green),
-						var(--purple),
-						var(--mid)
-					);
-					padding: 0.5rem 1rem;
-					border-radius: 1rem;
-					cursor: pointer;
-				}
-			}
-		}
-	}
+        span {
+          background: linear-gradient(
+            to right,
+            var(--green),
+            var(--purple),
+            var(--mid)
+          );
+          padding: 0.5rem 1rem;
+          border-radius: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 
+  .admin-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 88%;
+    margin: 5rem auto;
 
+    &-form {
+      padding: 1.5rem 2rem;
+      background: var(--pitch-black);
+      border-bottom: 0.1rem solid var(--light-white);
 
-	.admin-container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		width: 88%;
-		margin: 5rem auto;
+      form {
+        display: flex;
+        flex-direction: column;
+        min-width: 50rem;
+        padding: 2rem 0;
 
-		&-form {
-			padding: 1.5rem 2rem;
-			background: var(--pitch-black);
-			border-bottom: 0.1rem solid var(--light-white);
+        h2 {
+          text-transform: uppercase;
+          font-size: 2rem;
+          margin-bottom: 2.5rem;
+          align-self: center;
+        }
 
-			form {
-				display: flex;
-				flex-direction: column;
-				min-width: 50rem;
-				padding: 2rem 0;
+        label {
+          display: inline-block;
+          font-size: 1.5rem;
+          font-weight: bold;
+          letter-spacing: 0.1rem;
+          margin-bottom: 0.8rem;
+          cursor: pointer;
+        }
+      }
 
-				h2 {
-					text-transform: uppercase;
-					font-size: 2rem;
-					margin-bottom: 2.5rem;
-					align-self: center;
-				}
+      .row-1,
+      .row-2,
+      .row-3,
+      .row-4,
+      .row-5 {
+        display: flex;
+        flex-direction: column;
 
-				label {
-					display: inline-block;
-					font-size: 1.5rem;
-					font-weight: bold;
-					letter-spacing: 0.1rem;
-					margin-bottom: 0.8rem;
-					cursor: pointer;
-				}
-			}
+        input,
+        textarea {
+          display: inline-block;
+          margin-bottom: 1rem;
+          color: var(--light-white);
+          outline: none;
+          background: linear-gradient(var(--pitch-black), var(--pitch-black))
+              padding-box,
+            linear-gradient(90deg, #00ff00, #0023de, #ff00dd) border-box;
+          border: 3px solid transparent;
 
-			.row-1,
-			.row-2,
-			.row-3,
-			.row-4,
-			.row-5 {
-				display: flex;
-				flex-direction: column;
+          &::placeholder {
+            letter-spacing: 0.1rem;
+          }
+        }
 
-				input,
-				textarea {
-					display: inline-block;
-					margin-bottom: 1rem;
-					color: var(--light-white);
-					outline: none;
-					background: linear-gradient(var(--pitch-black), var(--pitch-black))
-							padding-box,
-						linear-gradient(90deg, #00ff00, #0023de, #ff00dd) border-box;
-					border: 3px solid transparent;
+        input {
+          padding: 1.6rem 0.5rem;
+          color: var(--light-white);
+        }
 
-					&::placeholder {
-						letter-spacing: 0.1rem;
-					}
-				}
+        textarea {
+          resize: none;
+          min-height: 13rem;
+          padding: 0.8rem;
+          color: var(--light-white);
+        }
+      }
 
-				input {
-					padding: 1.6rem 0.5rem;
-					color: var(--light-white);
-				}
+      .row-2,
+      .row-6 {
+        p {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+        }
+      }
 
-				textarea {
-					resize: none;
-					min-height: 13rem;
-					padding: 0.8rem;
-					color: var(--light-white);
-				}
-			}
+      .row-6 {
+        input {
+          display: inline-block;
+          margin-right: 0.8rem;
+          outline: none;
+        }
+      }
 
-			.row-2,
-			.row-6 {
-				p {
-					font-size: 1.4rem;
-					margin-bottom: 1rem;
-				}
-			}
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
 
-			.row-6 {
-				input {
-					display: inline-block;
-					margin-right: 0.8rem;
-					outline: none;
-				}
-			}
+        button {
+          background: linear-gradient(
+            to right,
+            var(--green),
+            var(--purple),
+            var(--mid)
+          );
+          border: 0.1rem solid transparent;
+          color: var(--light-white);
+          padding: 1.5rem 0.5rem;
+          border-radius: 3rem;
+          cursor: pointer;
+          font-size: 1.8rem;
+          letter-spacing: 0.2rem;
+          font-weight: bold;
+          min-width: 10rem;
+          margin: 0 0.5rem;
+          display: inline-block;
 
-			button {
-				display: inline-block;
-				margin-top: 1.5rem;
-				margin-bottom:3rem;
-				background: linear-gradient(
-					to right,
-					var(--green),
-					var(--purple),
-					var(--mid)
-				);
-				border: 0.1rem solid transparent;
-				color: var(--light-white);
-				padding: 1.5rem 0.5rem;
-				border-radius: 3rem;
-				cursor: pointer;
-				font-size: 1.8rem;
-				letter-spacing: 0.2rem;
-				font-weight: bold;
-			}
-		}
-	}
+          &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
 
-	/* RESPONSIVENESS */
-	@media screen and (max-width: 1100px) {
-		padding-bottom: 4rem;
+  /* RESPONSIVENESS */
+  @media screen and (max-width: 1100px) {
+    padding-bottom: 4rem;
 
-		.admin-container {
-			flex-direction: column;
-			margin: 5rem auto 0 auto;
-			width: 100%;
+    .admin-container {
+      flex-direction: column;
+      margin: 5rem auto 0 auto;
+      width: 100%;
 
-			&-links {
-				margin-bottom: 2rem;
-				width: 70%;
+      &-links {
+        margin-bottom: 2rem;
+        width: 70%;
 
-				ul {
-					width: 100%;
-				}
-			}
+        ul {
+          width: 100%;
+        }
+      }
 
-			&-form {
-				width: 85%;
+      &-form {
+        width: 85%;
 
-				form {
-					min-width: 100%;
+        form {
+          min-width: 100%;
 
-					.row-1,
-					.row-2,
-					.row-3,
-					.row-4,
-					.row-5,
-					.row-6 {
-						margin-bottom: 2rem;
-					}
-				}
-			}
-		}
-	}
+          .row-1,
+          .row-2,
+          .row-3,
+          .row-4,
+          .row-5,
+          .row-6 {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
 
-	@media screen and (max-width: 600px) {
-		.admin-container {
-			&-links {
-				width: 90%;
-			}
+  @media screen and (max-width: 600px) {
+    .admin-container {
+      &-links {
+        width: 90%;
+      }
 
-			&-form {
-				width: 100%;
-			}
-		}
-	}
+      &-form {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export default AdminHomeStyles;
